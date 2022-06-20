@@ -6,49 +6,16 @@
 
 ### 🙂🙂🙂项目介绍
 
-这是我在2022年上学期写的基于vue.js和element ui的响应式商城
+自己练习的几个js购物车项目
 
-在线演示：[https://source.imold.wang](https://source.imold.wang)
-
-<br />
-
-### 👍👍👍项目特点
-
-- 响应式网页，适配于各种屏幕尺寸的设备
-- 多种网页动态效果，增强用户体验
-- 简洁清新的网页设置，赏心悦目
-- 功能多，代码冗余小，加载速度快
+在线演示：
+- [https://js.imold.wang/1](https://js.imold.wang/1)
+- [https://js.imold.wang/2](https://js.imold.wang/1)
 
 <br />
 
 ### ✌️✌️✌️图片展示
 
-|                            首页                             |                           商品页                            |
+|                            shoppingcart1                            |                           shoppingcart2                            |
 | :---------------------------------------------------------: | :---------------------------------------------------------: |
-| ![](https://up.imold.wang/myprojects/sourceshop/imgs/1.png) | ![](https://up.imold.wang/myprojects/sourceshop/imgs/2.png) |
-
-|                           登录页                            |                           注册页                            |
-| :---------------------------------------------------------: | :---------------------------------------------------------: |
-| ![](https://up.imold.wang/myprojects/sourceshop/imgs/3.png) | ![](https://up.imold.wang/myprojects/sourceshop/imgs/5.png) |
-
-后台
-
-![](https://up.imold.wang/myprojects/sourceshop/imgs/6.png)
-
-<br />
-
-## 项目初始化/Project setup
-
-```
-npm install
-```
-
-### 编译运行/Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### 编译打包/Compiles and minifies for production
-```
-npm run build
-```
+| ![](https://up.imold.wang/myprojects/imgs/jsshopcar/imgs/1/1.png) | ![](https://up.imold.wang/myprojects/imgs/jsshopcar/imgs/2/3.png) |
