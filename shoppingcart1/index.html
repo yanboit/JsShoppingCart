@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<style type="text/css">
+			.img{
+				height: 200px;
+				width: 100%;
+				background:url(img/nike.jpg) no-repeat center center;
+				background-size: cover;
+			}
+			.card{
+				position: relative;
+				transition: all 0.1s linear;
+				overflow: hidden;
+			}
+			.card:hover{
+				box-shadow: 1px 1px 8px #CCC;
+				transform: translateY(-3px);
+			}
+			.buyCar{
+				position: absolute;
+				width: 80px;
+				height: 50px;
+				top:calc(50% - 25px);
+				right: -80px;
+				transition: all 0.2s linear;
+			}
+			.card:hover .buyCar{
+				right: 0;
+			}
+			.buyCar_icon{
+				margin-left: 5px;
+				display: inline-block;
+				height: 100%;
+				width: 50px;
+				background:url(img/buycar.png) no-repeat center center;
+				background-size: cover;
+			}
+			.floatCar{
+				position: fixed;
+				border-radius: 50%;
+				width: 60px;
+				height: 60px;
+				background-color: #000000;
+				bottom: 15%;
+				right: 10%;
+				background:cornsilk url(img/buycar1.png) no-repeat center center;
+				background-size:60% 60%;
+			}
+			.table_box{
+				position: fixed;
+				width: 98%;
+				height: auto;
+				max-height: 100vh;
+				background-color:white;
+				top: 0;
+				left:1%;
+				z-index: 999999999;
+				transition: all 0.2s linear;
+				overflow-y: scroll;
+				transform: translateY(-100%) translateY(60px);
+			}
+			.table_box_down{
+				transform: translateY(0px);
+			}
+			.table{
+				
+			}
+			.cancle,.reduce,.add{
+				display: inline-block;
+				height: 15px;
+				width: 15px;
+				background: url(img/cancle.png) no-repeat center center;
+				background-size: cover;
+				transform: scale(1.8);
+			}
+			.reduce{
+				background: url(img/reduce.png) no-repeat center center;
+				background-size: cover;
+			}
+			.add{
+				background: url(img/add.png) no-repeat center center;
+				background-size: cover;
+			}
+			.count_input{
+				text-align: center;
+				width:30px;
+				height: 15px;
+				background-color:transparent;
+				transform: scale(1.3);
+				outline: none;
+				border: none;
+			}
+			.hide_box{
+				background-color:#CCC;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 10px 0;
+			}
+			.hide{
+				display: inline-block;
+				height: 35px;
+				width: 35px;
+				background: red;
+				background-size: cover;
+				background: url(img/down.png) no-repeat center center;
+				background-size: cover;
+				transition: all 0.2s linear;
+			}
+			.hide_down{
+				background: url(img/hide.png) no-repeat center center;
+				background-size: cover;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container p-5 mt-4">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-6 col-12">
+					<div class="card">
+						<div class="img">
+							
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<h5>空军一号</h5>
+							</div>
+							<p>轻盈似箭，健步如飞，Nike air系列</p>
+							<div class="float-right text-danger">
+								$<span class="price">100</span>
+							</div>
+						</div>
+						<div class="buyCar">
+							<span class="buyCar_icon" onclick="addBuyCar(this)"></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-4 mt-sm-0">
+					<div class="card">
+						<div class="img">
+							
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<h5>空军一号</h5>
+							</div>
+							<p>轻盈似箭，健步如飞，Nike air系列</p>
+							<div class="float-right text-danger">
+								$<span class="price">100</span>
+							</div>
+						</div>
+						<div class="buyCar">
+							<span class="buyCar_icon" onclick="addBuyCar(this)"></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6 mt-md-4 mt-lg-0 mt-sm-4 col-12 mt-4">
+					<div class="card">
+						<div class="img">
+							
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<h5>空军一号</h5>
+							</div>
+							<p>轻盈似箭，健步如飞，Nike air系列</p>
+							<div class="float-right text-danger">
+								$<span class="price">100</span>
+							</div>
+						</div>
+						<div class="buyCar">
+							<span class="buyCar_icon" onclick="addBuyCar(this)"></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mt-lg-4 mt-4 col-sm-6 col-12">
+					<div class="card">
+						<div class="img">
+							
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<h5>空军一号</h5>
+							</div>
+							<p>轻盈似箭，健步如飞，Nike air系列</p>
+							<div class="float-right text-danger">
+								$<span class="price">100</span>
+							</div>
+						</div>
+						<div class="buyCar">
+							<span class="buyCar_icon" onclick="addBuyCar(this)"></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mt-lg-4 mt-4 col-sm-6 col-12">
+					<div class="card">
+						<div class="img">
+							
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<h5>空军一号</h5>
+							</div>
+							<p>轻盈似箭，健步如飞，Nike air系列</p>
+							<div class="float-right text-danger">
+								$<span class="price">100</span>
+							</div>
+						</div>
+						<div class="buyCar">
+							<span class="buyCar_icon" onclick="addBuyCar(this)"></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mt-lg-4 mt-4 col-sm-6 col-12">
+					<div class="card">
+						<div class="img">
+							
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<h5>空军一号</h5>
+							</div>
+							<p>轻盈似箭，健步如飞，Nike air系列</p>
+							<div class="float-right text-danger">
+								$<span class="price">100</span>
+							</div>
+						</div>
+						<div class="buyCar">
+							<span class="buyCar_icon" onclick="addBuyCar(this)"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="floatCar" onclick="down()">
+			
+		</div>
+		<div class="table_box">
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th>商品名称</th>
+						<th>价格</th>
+						<th>数量</th>
+						<th>小计</th>
+						<th>取消</th>
+					</tr>
+				</thead>
+				<tbody id="main">
+					<tr id="sum_price_tr">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td id="sum_price">合计:</td>
+						<td></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					
+				</tfoot>
+				
+			</table>
+			<div class="hide_box" onclick="down()">
+				<i class="hide"></i>
+			</div>
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.bundle.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var counting = 1;
+			function GoodsOrder(id,name,price,count,subtotal) {
+				this.id = id;
+				this.name = name;
+				this.price = price;
+				this.count = count;
+				this.subtotal = subtotal;
+				GoodsOrder.prototype.insertTr = function() {
+					var sumPriceTr = document.getElementById("sum_price_tr");
+					var tr = document.createElement("tr");
+					tr.id = "tr" + id;
+					sumPriceTr.before(tr);
+					for(let i = 0;i < 5;i++) {
+						tr.appendChild(document.createElement("td"));
+					}
+					var td = tr.getElementsByTagName("td");
+					td[0].innerHTML = name;
+					td[0].classList.add("name");
+					td[1].innerHTML = "￥" + "<span class='price'>" + price + "</span>";
+					td[2].classList.add("count");
+					td[2].innerHTML = "<span class='reduce' onclick='reduceCount(this)'></span><input class='count_input' value='" + count + "'  /><span class='add' onclick='addCount(this)'></span>";
+					td[3].classList.add("subtotal");
+					td[3].innerHTML = price + "";
+					td[4].innerHTML = "<i class='cancle' onclick='cancleBuy(this)'></i>";
+					
+				}
+			}
+			
+			// 加购物车
+			function addBuyCar(e) {
+				var name = e.parentNode.previousElementSibling.getElementsByTagName("h5")[0].innerHTML;
+				var price = Number(e.parentNode.previousElementSibling.getElementsByClassName("price")[0].innerHTML);
+				var count = 1;
+				var subtotal = price;
+				var goodsOrder = new GoodsOrder(counting++,name,price,count,subtotal);
+				goodsOrder.insertTr();
+				allPrice();
+			}
+			
+			// 小计
+			function subTotal(e) {
+				var subtotal = e.parentNode.nextElementSibling.innerHTML;
+				console.log(e.parentNode.getElementsByClassName("count_input")[0].value);
+				e.parentNode.nextElementSibling.innerHTML = Number(e.parentNode.previousElementSibling.getElementsByClassName("price")[0].innerHTML) * Number(e.parentNode.getElementsByClassName("count_input")[0].value) + "";;
+			}
+			
+			// 总价
+			function allPrice() {
+				var sumPrice = document.getElementById("sum_price");
+				var subPrice = document.getElementsByClassName("subtotal");
+				var sumTest = 0;
+				for(let i = 0;i < subPrice.length;i++) {
+					sumTest += Number(subPrice[i].innerHTML);
+				}
+				sumPrice.innerHTML = "总计:" + sumTest;
+			}
+			
+			// 加量
+			function addCount(e) {
+				var countInput = e.previousElementSibling;
+				countInput.value = Number(countInput.value) + 1;
+				subTotal(e);
+				allPrice();
+			}
+			
+			// 减量
+			function reduceCount(e) {
+				var countInput = e.nextElementSibling;
+				countInput.value = Number(countInput.value) - 1;
+				// 数量不能低于零
+				if(Number(countInput.value) < 0) {
+					alert("不能小于零！");
+					countInput.value = 0;
+				}
+				subTotal(e);
+				allPrice();
+			}
+			
+			// 取消
+			function cancleBuy(e) {
+				e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode);
+				
+				allPrice();
+			}
+			
+			function down() {
+				var tableBox = document.getElementsByClassName("table_box")[0];
+				var hide = document.getElementsByClassName("hide")[0];
+				if(tableBox.classList.contains("table_box_down")) {
+					tableBox.classList.remove("table_box_down");
+					hide.classList.remove("hide_down");
+				} else {
+					tableBox.classList.add("table_box_down");
+					hide.classList.add("hide_down");
+				}
+			}
+		</script>
+	</body>
+</html>

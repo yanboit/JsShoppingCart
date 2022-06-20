@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<style type="text/css">
+			.goods_img01{
+				background: url(img/timg.jpg) no-repeat center center;
+				background-size: cover;
+			}
+			.goods_img02{
+				background: url(img/1.png) no-repeat center center;
+				background-size: cover;
+			}
+			.goods_img03{
+				background: url(img/脉动.jpg) no-repeat center center;
+				background-size: cover;
+			}
+			.goods_img04{
+				background: url(img/百事.gif) no-repeat center center;
+				background-size: cover;
+			}
+			.goods_img05{
+				background: url(img/东鹏特饮.jpg) no-repeat center center;
+				background-size: cover;
+			}
+			.goods_img06{
+				background: url(img/红牛.jpg) no-repeat center center;
+				background-size: cover;
+			}
+			.goods_img07{
+				background: url(img/统一绿茶.jpg) no-repeat center center;
+				background-size: cover;
+			}
+			.table input{
+				text-align: center;
+				width:27.2px;
+				height: 27.2px;
+				background-color:transparent;
+				transform: translateY(-9px) scale(1.3);
+				outline: none;
+				border: none;
+			}
+			.add_buyCar_icon{
+				display: inline-block;
+				height:100%;
+				width: 24px;
+				background: url(img/buycar.png) no-repeat center center;
+				background-size: cover;
+			}
+			.cancle{
+				display: inline-block;
+				height: 27.2px;
+				width: 27.2px;
+				background: url(./img/取消.png) no-repeat center center;
+				background-size: cover;
+			}
+			.add,.reduce{
+				display: inline-block;
+				height:27.2px;
+				width: 27.2px;
+				
+			}
+			.reduce{
+				background:url(img/减.png) no-repeat center center;
+				background-size: cover;
+			}
+			.add{
+				background:url(img/加.png) no-repeat center center;
+				background-size: cover;
+			}
+			td{
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+	<body>
+
+		<!-- 全部商品 -->
+		<section class="all_goods p-0 p-sm-5">
+			<div class="container">
+				<div class="row bg-info px-4 py-3">
+					<span class="text-white">全部商品 &gt;</span>
+				</div>
+				<div class="row py-4">
+					<div class="col-lg-4 col-md-6 col-sm-6 col-6">
+						<div class="card">
+							<div class="card-body row">
+								<div class="col-4 goods_img01">
+									
+								</div>
+								<div class="goods_info col-8">
+									<div class="goods_name mb-1">
+										<span class="font-weight-bold text-danger">冰红茶</span>
+									</div>
+									<span>康师傅冰红茶冰酷的时尚饮品</span>
+								</div>
+							</div>
+							<div class="card-footer d-flex">
+								<div class="goods_price mr-auto">
+									$<span class="price_count">3</span>
+								</div>
+								<div class="add_buyCar">
+									<span title="加入购物车" class="add_buyCar_icon" onclick="addBuyCar(this)"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6 col-6">
+						<div class="card">
+							<div class="card-body row">
+								<div class="col-4 goods_img02">
+									
+								</div>
+								<div class="goods_info col-8">
+									<div class="goods_name mb-1">
+										<span class="font-weight-bold text-danger">可口可乐</span>
+									</div>
+									<span>可口可乐清爽汽水、运动饮料</span>
+								</div>
+							</div>
+							<div class="card-footer d-flex">
+								<div class="goods_price mr-auto">
+									$<span class="price_count">4</span>
+								</div>
+								<div class="add_buyCar">
+									<span title="加入购物车" class="add_buyCar_icon" onclick="addBuyCar(this)"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6 mt-4 mt-lg-0 col-6">
+						<div class="card">
+							<div class="card-body row">
+								<div class="col-4 goods_img03">
+									
+								</div>
+								<div class="goods_info col-8">
+									<div class="goods_name mb-1">
+										<span class="font-weight-bold text-danger">脉动</span>
+									</div>
+									<span>脉动维生素饮料，随时脉动回来</span>
+								</div>
+							</div>
+							<div class="card-footer d-flex">
+								<div class="goods_price mr-auto">
+									$<span class="price_count">6</span>
+								</div>
+								<div class="add_buyCar">
+									<span title="加入购物车" class="add_buyCar_icon" onclick="addBuyCar(this)"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6 mt-4 col-6">
+						<div class="card">
+							<div class="card-body row">
+								<div class="col-4 goods_img04">
+									
+								</div>
+								<div class="goods_info col-8">
+									<div class="goods_name mb-1">
+										<span class="font-weight-bold text-danger">百事</span>
+									</div>
+									<span>百事可乐碳酸饮料，清爽汽水</span>
+								</div>
+							</div>
+							<div class="card-footer d-flex">
+								<div class="goods_price mr-auto">
+									$<span class="price_count">5</span>
+								</div>
+								<div class="add_buyCar">
+									<span title="加入购物车" class="add_buyCar_icon" onclick="addBuyCar(this)"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6 mt-4 col-6">
+						<div class="card">
+							<div class="card-body row">
+								<div class="col-4 goods_img05">
+									
+								</div>
+								<div class="goods_info col-8">
+									<div class="goods_name mb-1">
+										<span class="font-weight-bold text-danger">东鹏特饮</span>
+									</div>
+									<span>东鹏特饮维生素功能运动饮料</span>
+								</div>
+							</div>
+							<div class="card-footer d-flex">
+								<div class="goods_price mr-auto">
+									$<span class="price_count">7</span>
+								</div>
+								<div class="add_buyCar">
+									<span title="加入购物车" class="add_buyCar_icon" onclick="addBuyCar(this)"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6 mt-4 col-6">
+						<div class="card">
+							<div class="card-body row">
+								<div class="col-4 goods_img06">
+									
+								</div>
+								<div class="goods_info col-8">
+									<div class="goods_name mb-1">
+										<span class="font-weight-bold text-danger">红牛</span>
+									</div>
+									<span>红牛好喝又具保健功效的功能饮料</span>
+								</div>
+							</div>
+							<div class="card-footer d-flex">
+								<div class="goods_price mr-auto">
+									$<span class="price_count">8</span>
+								</div>
+								<div class="add_buyCar">
+									<span title="加入购物车" class="add_buyCar_icon" onclick="addBuyCar(this)"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6 mt-4 col-6">
+						<div class="card">
+							<div class="card-body row">
+								<div class="col-4 goods_img07">
+									
+								</div>
+								<div class="goods_info col-8">
+									<div class="goods_name mb-1">
+										<span class="font-weight-bold text-danger">统一绿茶</span>
+									</div>
+									<span>统一绿茶一款清爽绿茶饮料产品</span>
+								</div>
+							</div>
+							<div class="card-footer d-flex">
+								<div class="goods_price mr-auto">
+									$<span class="price_count">6</span>
+								</div>
+								<div class="add_buyCar">
+									<span title="加入购物车" class="add_buyCar_icon" onclick="addBuyCar(this)"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- 价格 -->
+		<section class="pay">
+			<div class="container">
+				<div class="row">
+					<table class="table table-striped table-hover" cellspacing="0" cellpadding="0">
+						
+						<thead class="bg-danger">
+							<tr class="text-white">
+								<th>序号</th>
+								<th>商品名称</th>
+								<th>价格</th>
+								<th>数量</th>
+								<th>库存</th>
+								<th>小计</th>
+								<th>取消</th>
+							</tr>
+						</thead>
+						<tbody id="main">
+							
+							<tr id="total_tr">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td id="total">合计:</td>
+								<td></td>
+							</tr>
+						</tbody>
+						
+						<tfoot class="bg-info">
+							<tr>
+								<td>结算:</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>立即支付</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.bundle.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var number = 1;
+			
+			// 求序号
+			function getOrderNum(target) {
+				var orderNum = Number(target.parentNode.parentNode.children[0].innerHTML);
+				return orderNum - 1;
+			}
+			
+			// 点击加号数量增加
+			function addCount(e) {
+				var index = getOrderNum(e);
+				var countInput = e.previousElementSibling;
+				//判断是否超过库存
+				if(isOverMaxCounts(index)) {
+					alert("库存不够了！");
+				} else {
+					countInput.value = Number(countInput.value) + 1;
+				}
+				
+				subTotal(index);
+				total();
+			}
+			
+			// 点击减号数量减小
+			function reduceCount(e) {
+				var index = getOrderNum(e);
+				var countInput = e.nextElementSibling;
+				countInput.value = Number(countInput.value) - 1;
+				// 数量不能低于零
+				if(Number(countInput.value) < 0) {
+					alert("这里不进货！只卖货！");
+					countInput.value = 0;
+				}
+				subTotal(index);
+				total();
+			}
+			
+			// 判断购买量是否超过库存量
+			function isOverMaxCounts(index) {
+				var count = document.getElementsByClassName("count")[index];
+				var stock = document.getElementsByClassName("stock")[index];
+				if(Number(count.value) >= Number(stock.innerHTML)) {
+					return true; 
+				}
+				return false;
+			}
+			
+			// 计算小计
+			function subTotal(index) {
+				var unitPrice = document.getElementsByClassName("unit_price")[index];
+				var count = document.getElementsByClassName("count")[index];
+				var subTotal = document.getElementsByClassName("sub_total")[index];
+				subTotal.innerHTML = (Number(count.value) * Number(unitPrice.innerHTML) + "");
+			}
+			
+			// 计算总价
+			function total() {
+				var subPrice = document.getElementsByClassName("sub_total");
+				var total = document.getElementById("total");
+				var totalPrice = 0;
+				for(let i = 0;i < subPrice.length;i++) {
+					totalPrice += Number(subPrice[i].innerHTML);
+				}
+				
+				total.innerHTML = "合计:" + totalPrice + "元";
+			}
+			
+			// 加入购物车
+			function addBuyCar(e) {
+				var goodsPrice = Number(e.parentNode.previousElementSibling.children[0].innerHTML);
+				var goodsTitle = e.parentNode.parentNode.previousElementSibling.getElementsByTagName("span")[0].innerHTML;
+				
+				var flag = false;
+				var temp;
+				var goodsTitles = document.getElementsByClassName("goods_title");
+				for(let i = 0;i < goodsTitles.length;i++) {
+					if(goodsTitles[i].innerHTML == goodsTitle) {
+						flag = true;
+						temp = i;
+					} 
+				}
+				if(flag) {
+					
+					if(Number(document.getElementsByClassName("count")[temp].value) >= Number(document.getElementsByClassName("stock")[temp].innerHTML)) {
+						alert("库存不够了！");
+					} else {
+						document.getElementsByClassName("count")[temp].value = Number(document.getElementsByClassName("count")[temp].value) + 1;
+						subTotal(temp);
+						total();
+					}
+				} else {
+					var totalTr = document.getElementById("total_tr");
+					var tr = document.createElement("tr");
+					totalTr.before(tr);
+					for(let i = 0;i <= 6;i++) {
+						tr.appendChild(document.createElement("td"));
+					}
+					tr.children[0].innerHTML = number + "";
+					tr.children[1].innerHTML = goodsTitle;
+					tr.children[2].innerHTML = goodsPrice + "";
+					tr.children[1].classList.add("goods_title");
+					tr.children[3].innerHTML = "<span class='reduce' onclick='reduceCount(this)'></span><input class='count' value='1' /><span class='add' onclick='addCount(this)'></span>";
+					tr.children[4].innerHTML = "10";
+					tr.children[5].innerHTML = goodsPrice + "";
+					tr.children[6].innerHTML = '<span class="cancle" onclick="cancleBuy(this)"></span>';
+					tr.children[0].classList.add("order_number");
+					tr.children[2].classList.add("unit_price");
+					tr.children[4].classList.add("stock");
+					tr.children[5].classList.add("sub_total");
+					number++;
+					total();
+				}
+				
+			}
+			
+			// 取消购物车
+			function cancleBuy(target) {
+				target.parentNode.parentNode.parentNode.removeChild(target.parentNode.parentNode);
+				total();
+			}
+		</script>
+	</body>
+</html>
