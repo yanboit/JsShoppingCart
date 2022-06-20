@@ -10,7 +10,7 @@
 
 在线演示：
 - [https://js.imold.wang/1](https://js.imold.wang/1)
-- [https://js.imold.wang/2](https://js.imold.wang/1)
+- [https://js.imold.wang/2](https://js.imold.wang/2)
 
 <br />
 
